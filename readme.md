@@ -15,7 +15,7 @@ Big ups to https://github.com/heroku/no-kafka for how I'm hitting Kafka, and Fay
 6. Add a Kafka Topic, and then put it in your environment settings. You can do this by gettin in your Heroku CLI, and running the following:
  `heroku plugins:install heroku-kafka` - because you might not have the addon
  `heroku kafka:topics:create MY_TOPIC_NAME_HERE` - create the topic, but make sure this topic name matches the one you entered in the env variable KAFKA_TOPIC. **If on shared tier** - you will also get back your Kafka prefix, which needs to be put into the KAFKA_PREFIX env variable.
-7. Reset yo Dynos if you werent toying with env variables, and you should be all set.
+7. Go to your app's overview page. Turn web dynos to 0, and worker dynos to 1. Otherwise you'll get some ugly 'cant bind to yo web thing' error, you don't want that.
 8. Profit?
 
 ## Walkthrough for the less code inclined

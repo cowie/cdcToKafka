@@ -49,6 +49,8 @@ return producer.init().then(function(){
                     console.log(result);
                 });
             });
+        } else{
+            console.error(err);
         }
     });
 });
